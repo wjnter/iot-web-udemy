@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+/*------------------------ Recommendation ------------------------*/
+.recommendation {
+  background: #29303b;
+  border-top: 0.5rem solid;
+  border-image-source: linear-gradient(to left,#EC5252,#6E1A52);
+  border-image-slice: 1;
+}
+.recommendation-info {
+}
+.text-middle {
+  justify-content: space-evenly;
+  align-items: center;
+}
+.rec-icon {
+  font-size: 2rem;
+}
+
+/*------------------------ Categories ------------------------*/
+.categories-content {
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0,0,0,0.15);
+  padding: 0.3rem 0.7rem;
+  transition: all 0.3s ease-in-out;
+}
+.categories-content:hover {
+  box-shadow: 0px 0.5px 6px 3px rgba(0,0,0,0.15);
+}
+.categories-link {
+  color: #000;
+}
+.categories-link:hover {
+  text-decoration: none;
+  color: #000 !important;
+}
+.categories-icon {
+  font-size: 1.5rem;
+}
+.categories-text {
+  overflow: hidden;
+  line-height: 32px;
+  height: 32px;
+  min-width: 1px;
+}
+
+/*------------------------ Reviews ------------------------*/
+/* Carousel */
+@media (min-width: 768px) {
+  /* show 3 items */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    transition: none;
+  }
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+}
+
+.card-feedback-body {
+  height: 150px;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+/* end of carousel */
+.reviews {
+  background: #f7f8fa;
+  border-bottom: 1px solid #dedfe0;
+  
+}
+
+.partners-text {
+  font-size: 0.9rem;
+}
+.partners-logo {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.logo-item {
+  margin-top: 1rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+.non-student-cta-text {
+  padding: 1rem 2.3rem;
+  /* border-right: 0.1rem solid #dedfe0; */
+}
+
+
+/*------------------------ Footer ------------------------*/
+.footer {
+  border-bottom: 0.4rem solid #ec5252;
+}
+li {
+  list-style: none;  
+}
+.links {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100px;
+  line-break: 1.2rem;
+}
+.footer-link {
+  margin-bottom: 0.2rem;
+  margin-right: 0.5rem;
+}
+.link-text {
+  color: #007791;
+}
+.link-text:hover {
+  color: #003845;
+  text-decoration: none;
+}
+.selectpicker {
+  width: 7rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #686f7a;
+  cursor: pointer;
+  margin-bottom: 0.4rem;
+}
+.selectpicker:hover {
+  color: #000;
+}
+.footer-copyright {
+  color: #686f7a;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+}
+.list-inline {
+  font-size: 0.9rem;
+  display: inline-flex;
+}
+.box-container {
+  border-top: 1px solid #dedfe0;
+}
